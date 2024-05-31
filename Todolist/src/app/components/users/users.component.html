@@ -1,0 +1,13 @@
+<div class="container">
+  <h1>Users and their Todos</h1>
+  <div *ngFor="let user of users" class="card mb-3">
+    <div class="card-body">
+      <h5 class="card-title">{{ user.firstName }}</h5>
+      <ul class="list-group">
+        <li *ngFor="let todo of getUserTodos(user.id)" class="list-group-item">
+          {{ todo.todo }} - <input type="checkbox" [checked]="todo.completed" disabled>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
