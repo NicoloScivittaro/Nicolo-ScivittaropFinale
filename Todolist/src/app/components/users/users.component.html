@@ -3,11 +3,12 @@
   <ul class="list-group">
     <li *ngFor="let user of users" [ngClass]="{'all-completed': areAllTodosCompleted(user.id)}" class="list-group-item">
       <div class="d-flex align-items-center mb-3">
-        <img src="{{ user.image }}" alt="{{ user.firstName }}" class="rounded-circle mr-3 user-image " id="image">
+        <img [src]=" user.image " [alt]=" user.firstName " class="rounded-circle mr-3 user-image " id="image">
         <h3>{{ user.firstName }}</h3>
       </div>
       <ul class="list-group mt-3">
-        <li *ngFor="let todo of getUserTodos(user.id)" class="list-group-item d-flex justify-content-between align-items-center p-3" [class.completed]="todo.completed">
+        <li *ngFor="let todo of getUserTodos(user.id)"
+         class="list-group-item d-flex justify-content-between align-items-center p-3" [class.completed]="todo.completed">
           <div class="d-flex align-items-center">
             <input type="checkbox" class="mr-3" [(ngModel)]="todo.completed" (change)="onTodoStatusChange(todo)">
             <span class="m-1" [ngClass]="{ 'text-muted': todo.completed }">{{ todo.todo }}</span>
