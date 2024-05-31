@@ -2,11 +2,6 @@ body {
   font-family: Arial, sans-serif;
 }
 
-.container {
-  margin-top: 20px;
-}
-
-.completed {
-  text-decoration: line-through;
-  color: gray;
+.completed strong {
+  color: white;
 }

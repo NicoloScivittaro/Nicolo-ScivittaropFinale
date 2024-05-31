@@ -1,10 +1,12 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-  <a class="navbar-brand" href="#"><i class="fas fa-tasks"></i> Todo App</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav ml-auto">
+<aside class="sidebar">
+  <div class="sidebar-header">
+    <a class="navbar-brand" id="title"><i class="fas fa-tasks "></i> Todo App</a>
+    <button class="sidebar-toggler" type="button" (click)="toggleSidebar()">
+      <i class="fas fa-bars"></i>
+    </button>
+  </div>
+  <div class="sidebar-body">
+    <ul class="nav flex-column">
       <li class="nav-item">
         <a class="nav-link" routerLink="/" routerLinkActive="active"><i class="fas fa-list"></i> Todos</a>
       </li>
@@ -16,4 +18,4 @@
       </li>
     </ul>
   </div>
-</nav>
+</aside>

@@ -24,4 +24,13 @@ export class UsersComponent implements OnInit {
   getUserTodos(userId: number): Todo[] {
     return this.todos.filter(todo => todo.userId === userId);
   }
+
+  onTodoStatusChange(todo: Todo): void {
+    this.todoService.updateTodoStatus(todo.id, todo.completed);
+  }
+
+  areAllTodosCompleted(userId: number): boolean {
+    const userTodos = this.getUserTodos(userId);
+    return userTodos.every(todo => todo.completed);
+  }
 }

@@ -1,27 +1,60 @@
-body {
-  font-family: Arial, sans-serif;
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 250px;
+  background-color: #d4e5ed;
+  color: #007bff;
+  padding-top: 70px; /* Aggiunto spazio sopra l'header */
+  z-index: 1000;
+  transition: width 0.3s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Aggiunto ombra per definire la separazione dalla pagina */
 }
 
-.navbar-brand {
-  font-weight: bold;
+.sidebar-header {
+  padding: 20px;
   display: flex;
   align-items: center;
+  justify-content: space-between; /* Allinea il brand e il toggler */
 }
 
-.navbar-brand i {
-  margin-right: 10px;
+.sidebar-header a {
+  color: #007bff;
+  text-decoration: none;
+  font-size: 1.5rem; /* Aumentato la dimensione del font */
+}
+
+.sidebar-toggler {
+  color: #007bff;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 1.5rem; /* Aumentato la dimensione del font */
+}
+
+.sidebar-body {
+  padding: 20px;
 }
 
 .nav-link {
-  display: flex;
-  align-items: center;
+  color: #007bff;
+  padding: 10px 20px;
+  transition: color 0.3s;
 }
 
-.nav-link i {
-  margin-right: 5px;
+.nav-link:hover {
+  color: #459cfa;
 }
 
-.nav-link.active {
-  background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 5px;
+.active .nav-link {
+  font-weight: bold;
+}
+
+#title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #007bff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }

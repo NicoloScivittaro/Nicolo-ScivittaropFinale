@@ -1,13 +1,20 @@
 <div class="container">
-  <h1>Users and their Todos</h1>
-  <div *ngFor="let user of users" class="card mb-3">
-    <div class="card-body">
-      <h5 class="card-title">{{ user.firstName }}</h5>
-      <ul class="list-group">
-        <li *ngFor="let todo of getUserTodos(user.id)" class="list-group-item">
-          {{ todo.todo }} - <input type="checkbox" [checked]="todo.completed" disabled>
+  <h1 class="display-4 title">Users</h1>
+  <ul class="list-group">
+    <li *ngFor="let user of users" [ngClass]="{'all-completed': areAllTodosCompleted(user.id)}" class="list-group-item">
+      <div class="d-flex align-items-center mb-3">
+        <img src="{{ user.image }}" alt="{{ user.firstName }}" class="rounded-circle mr-3 user-image " id="image">
+        <h3>{{ user.firstName }}</h3>
+      </div>
+      <ul class="list-group mt-3">
+        <li *ngFor="let todo of getUserTodos(user.id)" class="list-group-item d-flex justify-content-between align-items-center p-3" [class.completed]="todo.completed">
+          <div class="d-flex align-items-center">
+            <input type="checkbox" class="mr-3" [(ngModel)]="todo.completed" (change)="onTodoStatusChange(todo)">
+            <span class="m-1" [ngClass]="{ 'text-muted': todo.completed }">{{ todo.todo }}</span>
+          </div>
         </li>
       </ul>
-    </div>
-  </div>
+    </li>
+  </ul>
 </div>
+<!-- compila tutto l utente ho perso molto tempo per farlo ahahahahaha -->

@@ -1,5 +1,5 @@
 <div class="container">
-  <h1>Completed Todos</h1>
+  <h1 class="display-4 title">Completed Todos</h1>
   <ul class="list-group">
     <li *ngFor="let todo of completedTodos" class="list-group-item">
       {{ todo.todo }} - <strong>{{ getUserName(todo.userId) }}</strong>

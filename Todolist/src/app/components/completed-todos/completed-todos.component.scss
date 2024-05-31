@@ -1,0 +1,21 @@
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #007bff
+}
+
+.list-group-item {
+  border-color: #007bff;
+  border-top-width: 1px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.list-group-item:hover {
+  background-color: #d4e5ed;
+}
+
+.list-group-item strong {
+  color: #6c757d;
+}
