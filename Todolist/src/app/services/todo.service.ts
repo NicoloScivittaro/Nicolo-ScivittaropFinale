@@ -1,11 +1,6 @@
 import { Injectable } from '@angular/core';
+import { Todo } from '../model/todo';
 
-interface Todo {
-  id: number;
-  todo:string;
-  completed: boolean;
-  userId: number;
-}
 
 @Injectable({
   providedIn: 'root'

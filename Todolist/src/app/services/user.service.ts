@@ -1,14 +1,5 @@
 import { Injectable } from '@angular/core';
-
-interface User {
-  id: number
-  firstName: string
-  lastName: string
-  email: string
-  image: string
-  title: string
-}
-
+import { User } from '../model/user';
 @Injectable({
   providedIn: 'root'
 })
